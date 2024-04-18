@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckrrpdn8rkl17"]
+
+[ext_resource type="Script" path="res://games/sheeps/main.gd" id="1_aue0y"]
+
+[node name="Sheeps" type="Node2D"]
+script = ExtResource("1_aue0y")
+
+[node name="Sheeps" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Players" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="Player1" type="Marker2D" parent="Spawns"]
+position = Vector2(560, 540)
+
+[node name="Player2" type="Marker2D" parent="Spawns"]
+position = Vector2(1360, 540)
+
+[node name="Player3" type="Marker2D" parent="Spawns"]
+position = Vector2(960, 140)
+
+[node name="Player4" type="Marker2D" parent="Spawns"]
+position = Vector2(960, 940)
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -211.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="CounterContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Line2D" type="Line2D" parent="."]
