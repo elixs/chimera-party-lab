@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://0a60qcg7vt22"]
+
+[ext_resource type="Script" path="res://games/sheeps/scenes/counter.gd" id="1_u3qbr"]
+
+[node name="Counter" type="PanelContainer"]
+script = ExtResource("1_u3qbr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "XX"
