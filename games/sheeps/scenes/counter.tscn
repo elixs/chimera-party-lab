@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://0a60qcg7vt22"]
+[gd_scene load_steps=3 format=3 uid="uid://0a60qcg7vt22"]
 
 [ext_resource type="Script" path="res://games/sheeps/scenes/counter.gd" id="1_u3qbr"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qu11y"]
+bg_color = Color(1, 1, 1, 0.498039)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="Counter" type="PanelContainer"]
+custom_minimum_size = Vector2(150, 150)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qu11y")
 script = ExtResource("1_u3qbr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -10,4 +19,5 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
-text = "XX"
+text = "?"
+horizontal_alignment = 1

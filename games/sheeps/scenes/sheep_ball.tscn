@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk5cwdjcn47lc"]
+
+[ext_resource type="Texture2D" uid="uid://df407utjqmsog" path="res://games/sheeps/assets/Tiny Swords/Happy_Sheep.png" id="1_2ok4y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpt0w"]
+radius = 45.0111
+
+[node name="SheepBall" type="RigidBody2D"]
+center_of_mass_mode = 1
+center_of_mass = Vector2(0, -45)
+
+[node name="HappySheep" type="Sprite2D" parent="."]
+position = Vector2(0, -45)
+scale = Vector2(3, 3)
+texture = ExtResource("1_2ok4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -45)
+shape = SubResource("CircleShape2D_mpt0w")
