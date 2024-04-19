@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://r06wtsof277w"]
+
+[ext_resource type="Texture2D" uid="uid://bmcltv1hf78p7" path="res://games/sheeps/assets/Tiny Swords/Resources/Resources/W_Idle.png" id="1_mu7xq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ultq4"]
+friction = 0.0
+bounce = 1.0
+
+[node name="ObstacleD" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_ultq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -52)
+scale = Vector2(4, 4)
+texture = ExtResource("1_mu7xq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(4, -6)
+polygon = PackedVector2Array(58, -28, 86, 30, -80, 97, -117, 64)

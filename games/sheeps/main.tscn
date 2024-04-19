@@ -1,12 +1,211 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckrrpdn8rkl17"]
+[gd_scene load_steps=22 format=3 uid="uid://ckrrpdn8rkl17"]
 
 [ext_resource type="Script" path="res://games/sheeps/main.gd" id="1_aue0y"]
+[ext_resource type="Texture2D" uid="uid://cq846861kl62j" path="res://games/sheeps/assets/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="2_rpbe7"]
+[ext_resource type="Texture2D" uid="uid://d2hnudgpu1q17" path="res://games/sheeps/assets/Tiny Swords/Wood_Fence_End.png" id="3_n8dct"]
+[ext_resource type="Texture2D" uid="uid://b0g6ast0nyep6" path="res://games/sheeps/assets/Tiny Swords/Wood_Fence_Top.png" id="4_esvmi"]
+[ext_resource type="Texture2D" uid="uid://cucresykwcu0b" path="res://games/sheeps/assets/Tiny Swords/Wood_Fence_Start.png" id="5_4gwon"]
+[ext_resource type="PackedScene" uid="uid://me65p3hd46p" path="res://games/sheeps/scenes/winner.tscn" id="5_5rgoj"]
+[ext_resource type="PackedScene" uid="uid://bk5cwdjcn47lc" path="res://games/sheeps/scenes/sheep_ball.tscn" id="5_lv678"]
+[ext_resource type="PackedScene" uid="uid://bbtj44tdcu813" path="res://games/sheeps/scenes/sheep.tscn" id="7_2xe43"]
+[ext_resource type="PackedScene" uid="uid://cpjqwy43og3yj" path="res://games/sheeps/scenes/obstacles/obstacle_b.tscn" id="7_51r3j"]
+[ext_resource type="PackedScene" uid="uid://dv48nnkvtubnm" path="res://games/sheeps/scenes/obstacles/obstacle_c.tscn" id="8_7ahoy"]
+[ext_resource type="PackedScene" uid="uid://0a60qcg7vt22" path="res://games/sheeps/scenes/counter.tscn" id="8_cjhbs"]
+[ext_resource type="PackedScene" uid="uid://cdh2pf41lhq" path="res://games/sheeps/scenes/obstacles/obstacle_a.tscn" id="9_c3yqw"]
+[ext_resource type="PackedScene" uid="uid://r06wtsof277w" path="res://games/sheeps/scenes/obstacles/obstacle_d.tscn" id="12_m8ofn"]
+[ext_resource type="PackedScene" uid="uid://cuq0hn06n15ch" path="res://games/sheeps/scenes/obstacles/obstacle_e.tscn" id="13_atbuk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6ps8"]
+texture = ExtResource("2_rpbe7")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/top_side = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/terrains_peering_bit/right_side = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tpw2q"]
+tile_size = Vector2i(64, 64)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Grass"
+terrain_set_0/terrain_0/color = Color(0.705706, 0.0495504, 0.55168, 1)
+sources/1 = SubResource("TileSetAtlasSource_f6ps8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyn3t"]
+size = Vector2(246, 1344)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e38n0"]
+size = Vector2(3400, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycpd2"]
+size = Vector2(21.5, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bog7"]
+size = Vector2(480, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ujch"]
+size = Vector2(1134, 100)
 
 [node name="Sheeps" type="Node2D"]
 script = ExtResource("1_aue0y")
+sheep_scene = ExtResource("7_2xe43")
+counter_scene = ExtResource("8_cjhbs")
+sheep_ball_scene = ExtResource("5_lv678")
+winner_scene = ExtResource("5_5rgoj")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-64, -100)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_tpw2q")
+format = 2
+layer_0/tile_data = PackedInt32Array(196615, 131073, 1, 131079, 131073, 1, 65543, 131073, 1, 7, 131073, 0, 196614, 65537, 1, 131078, 65537, 1, 65542, 65537, 1, 6, 65537, 0, 196613, 65537, 1, 131077, 65537, 1, 65541, 65537, 1, 5, 65537, 0, 196612, 65537, 1, 131076, 65537, 1, 65540, 65537, 1, 4, 65537, 0, 196611, 65537, 1, 131075, 65537, 1, 65539, 65537, 1, 3, 65537, 0, 196610, 65537, 1, 131074, 65537, 1, 65538, 65537, 1, 2, 65537, 0, 196609, 65537, 1, 131073, 65537, 1, 65537, 65537, 1, 1, 65537, 0, 196608, 1, 1, 131072, 1, 1, 65536, 1, 1, 0, 1, 0, 262144, 1, 1, 262145, 65537, 1, 262146, 65537, 1, 262147, 65537, 1, 262148, 65537, 1, 262149, 65537, 1, 262150, 65537, 1, 262151, 131073, 1, 327680, 1, 1, 327681, 65537, 1, 327682, 65537, 1, 327683, 65537, 1, 327684, 65537, 1, 327685, 65537, 1, 327686, 65537, 1, 327687, 131073, 1, 393223, 131073, 1, 393222, 65537, 1, 393221, 65537, 1, 393220, 65537, 1, 393219, 65537, 1, 393218, 65537, 1, 393217, 65537, 1, 393216, 1, 1, 458752, 1, 1, 458753, 65537, 1, 524289, 65537, 1, 524290, 65537, 1, 458754, 65537, 1, 458755, 65537, 1, 458756, 65537, 1, 458757, 65537, 1, 458758, 65537, 1, 458759, 131073, 1, 524295, 131073, 1, 524294, 65537, 1, 524293, 65537, 1, 524292, 65537, 1, 524291, 65537, 1, 524288, 1, 1, 589824, 1, 1, 589825, 65537, 1, 589826, 65537, 1, 589827, 65537, 1, 589828, 65537, 1, 589829, 65537, 1, 589830, 65537, 1, 589831, 131073, 1, 655367, 131073, 1, 655366, 65537, 1, 655365, 65537, 1, 655364, 65537, 1, 655363, 65537, 1, 655362, 65537, 1, 655361, 65537, 1, 655360, 1, 1, 720896, 1, 1, 720897, 65537, 1, 720898, 65537, 1, 720899, 65537, 1, 720900, 65537, 1, 720901, 65537, 1, 720902, 65537, 1, 720903, 131073, 1, 786439, 131073, 1, 786438, 65537, 1, 786437, 65537, 1, 786436, 65537, 1, 786435, 65537, 1, 786434, 65537, 1, 786433, 65537, 1, 786432, 1, 1, 851968, 1, 1, 851969, 65537, 1, 851970, 65537, 1, 851971, 65537, 1, 851972, 65537, 1, 851973, 65537, 1, 851974, 65537, 1, 851975, 131073, 1, 917510, 65537, 2, 917509, 65537, 2, 917508, 65537, 2, 917507, 65537, 2, 917506, 65537, 2, 917505, 65537, 2, 917504, 1, 2, 917511, 131073, 2)
+
+[node name="SpawnTop" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2300, 90)
+
+[node name="SpawnBottom" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2300, 800)
+
+[node name="KillZone" type="Area2D" parent="."]
+position = Vector2(-233, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(-131, -68)
+shape = SubResource("RectangleShape2D_iyn3t")
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1500, -10)
+shape = SubResource("RectangleShape2D_e38n0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1500, 900)
+shape = SubResource("RectangleShape2D_e38n0")
 
 [node name="Sheeps" type="Node2D" parent="."]
 y_sort_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="ObstacleA" parent="Sheeps" instance=ExtResource("9_c3yqw")]
+position = Vector2(1101, 550)
+
+[node name="ObstacleB" parent="Sheeps" instance=ExtResource("7_51r3j")]
+position = Vector2(354, 933)
+
+[node name="ObstacleC" parent="Sheeps" instance=ExtResource("8_7ahoy")]
+position = Vector2(495, 461)
 
 [node name="Players" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -25,10 +224,9 @@ position = Vector2(960, 140)
 [node name="Player4" type="Marker2D" parent="Spawns"]
 position = Vector2(960, 940)
 
-[node name="GameTimer" type="Timer" parent="."]
-wait_time = 5.0
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 10.0
 one_shot = true
-autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -48,4 +246,172 @@ layout_mode = 2
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -172.0
+offset_right = 168.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="WinnerLabel" type="Label" parent="CanvasLayer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 96
+text = "Winner"
+horizontal_alignment = 1
+
+[node name="WinnersContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Winner" parent="CanvasLayer/VBoxContainer/WinnersContainer" instance_placeholder="res://games/sheeps/scenes/winner.tscn"]
+layout_mode = 2
+
+[node name="SpawnLeft" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(450, 2000)
+
+[node name="SpawnRight" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1470, 2000)
+
+[node name="Fence" type="Node2D" parent="."]
+position = Vector2(960, 3244)
+
+[node name="Left" type="Node2D" parent="Fence"]
+position = Vector2(-617, -225)
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="WoodFenceEnd3" type="Sprite2D" parent="Fence/Left"]
+position = Vector2(-34, -141)
+texture = ExtResource("3_n8dct")
+
+[node name="WoodFenceTop" type="Sprite2D" parent="Fence/Left/WoodFenceEnd3"]
+position = Vector2(41, 26.5)
+texture = ExtResource("4_esvmi")
+offset = Vector2(75, 50.5)
+
+[node name="WoodFenceEnd2" type="Sprite2D" parent="Fence/Left"]
+position = Vector2(-34, -66)
+texture = ExtResource("3_n8dct")
+
+[node name="WoodFenceTop" type="Sprite2D" parent="Fence/Left/WoodFenceEnd2"]
+position = Vector2(41, 26.5)
+texture = ExtResource("4_esvmi")
+offset = Vector2(75, 50.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fence/Left"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fence/Left/StaticBody2D"]
+position = Vector2(0.25, -160)
+shape = SubResource("RectangleShape2D_ycpd2")
+
+[node name="Right" type="Node2D" parent="Fence"]
+position = Vector2(625, -225)
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="WoodFenceEnd3" type="Sprite2D" parent="Fence/Right"]
+position = Vector2(-34, -141)
+texture = ExtResource("3_n8dct")
+metadata/_edit_group_ = true
+
+[node name="WoodFenceTop" type="Sprite2D" parent="Fence/Right/WoodFenceEnd3"]
+position = Vector2(24, 26.5)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_esvmi")
+offset = Vector2(75, 50.5)
+
+[node name="WoodFenceEnd2" type="Sprite2D" parent="Fence/Right"]
+position = Vector2(-34, -66)
+texture = ExtResource("3_n8dct")
+metadata/_edit_group_ = true
+
+[node name="WoodFenceTop" type="Sprite2D" parent="Fence/Right/WoodFenceEnd2"]
+position = Vector2(24, 26.5)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_esvmi")
+offset = Vector2(75, 50.5)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Fence/Right"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fence/Right/StaticBody2D2"]
+position = Vector2(-2.5, -160)
+shape = SubResource("RectangleShape2D_ycpd2")
+
+[node name="SheepBalls" type="Node2D" parent="Fence"]
+unique_name_in_owner = true
+
+[node name="Bottom" type="Node2D" parent="Fence"]
+scale = Vector2(3, 3)
+
+[node name="WoodFenceStart" type="Sprite2D" parent="Fence/Bottom"]
+position = Vector2(-101.667, -66)
+texture = ExtResource("5_4gwon")
+
+[node name="WoodFenceStart2" type="Sprite2D" parent="Fence/Bottom"]
+position = Vector2(36.3333, -66)
+texture = ExtResource("5_4gwon")
+
+[node name="WoodFenceStart3" type="Sprite2D" parent="Fence/Bottom"]
+position = Vector2(174.333, -66)
+texture = ExtResource("5_4gwon")
+
+[node name="WoodFenceEnd" type="Sprite2D" parent="Fence/Bottom"]
+position = Vector2(174.333, -66)
+texture = ExtResource("3_n8dct")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Fence/Bottom"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fence/Bottom/StaticBody2D"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_6bog7")
+
+[node name="ResultsArea" type="Area2D" parent="Fence"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fence/ResultsArea"]
+position = Vector2(0, -615)
+shape = SubResource("RectangleShape2D_2ujch")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 2900)
+
+[node name="CameraResults" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(960, 2900)
+
+[node name="CameraGame" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(960, 539)
+
+[node name="Results" type="Label" parent="."]
+unique_name_in_owner = true
+offset_top = 2424.0
+offset_right = 1920.0
+offset_bottom = 2556.0
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 32
+theme_override_font_sizes/font_size = 96
+text = "0"
+horizontal_alignment = 1
+
+[node name="ObstacleD" parent="." instance=ExtResource("12_m8ofn")]
+position = Vector2(848, 3)
+
+[node name="ObstacleC" parent="." instance=ExtResource("13_atbuk")]
+position = Vector2(844, 879)

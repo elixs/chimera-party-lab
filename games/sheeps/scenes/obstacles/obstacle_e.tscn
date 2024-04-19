@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuq0hn06n15ch"]
+
+[ext_resource type="Texture2D" uid="uid://bffweto20kwyk" path="res://games/sheeps/assets/Tiny Swords/Deco/01.png" id="1_6rkl7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ultq4"]
+friction = 0.0
+bounce = 0.75
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1el04"]
+radius = 37.108
+
+[node name="ObstacleC" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_ultq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -52)
+scale = Vector2(4, 4)
+texture = ExtResource("1_6rkl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -47)
+shape = SubResource("CircleShape2D_1el04")

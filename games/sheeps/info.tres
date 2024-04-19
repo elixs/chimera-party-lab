@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="GameInfo" load_steps=5 format=3 uid="uid://of0x7cwcpc8o"]
 
-[ext_resource type="Texture2D" uid="uid://bcbnjudxibp0o" path="res://chimerin_lab/assets/chimerin.png" id="1_1b8nj"]
+[ext_resource type="Texture2D" uid="uid://df407utjqmsog" path="res://games/sheeps/assets/Tiny Swords/Happy_Sheep.png" id="1_647e5"]
 [ext_resource type="Script" path="res://scripts/game_info.gd" id="2_a74hl"]
 [ext_resource type="Script" path="res://scripts/game_input.gd" id="2_qmcy8"]
 
@@ -13,5 +13,5 @@ description = "Count"
 script = ExtResource("2_a74hl")
 name = "Oh my sheep!"
 description = "Count the [shake level=10][outline_color=black][outline_size=20]sheeps[/outline_size][/outline_color][/shake]"
-image = ExtResource("1_1b8nj")
+image = ExtResource("1_647e5")
 inputs = Array[ExtResource("2_qmcy8")]([SubResource("Resource_l1ktx")])

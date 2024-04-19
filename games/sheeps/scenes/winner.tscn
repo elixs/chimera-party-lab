@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://me65p3hd46p"]
+
+[ext_resource type="Script" path="res://games/sheeps/scenes/winner.gd" id="1_f6wef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh76c"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Winner" type="PanelContainer"]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gh76c")
+script = ExtResource("1_f6wef")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2

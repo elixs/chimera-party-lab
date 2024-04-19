@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpjqwy43og3yj"]
+
+[ext_resource type="Texture2D" uid="uid://3qsm1kvdenaa" path="res://games/sheeps/assets/Tiny Swords/Deco/09.png" id="1_8cdsi"]
+
+[node name="ObstacleB" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -116)
+scale = Vector2(4, 4)
+texture = ExtResource("1_8cdsi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(11, -201, 83, -164, 108, -103, 88, -49, 0, -47, -112, -67, -100, -173)
