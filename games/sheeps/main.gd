@@ -139,7 +139,7 @@ func _show_winner() -> void:
 	await get_tree().create_timer(0.75).timeout
 	for winner in winners:
 		var winner_inst = winner_scene.instantiate()
-		winner_inst.color = winner.primary_color
+		winner_inst.color = winner.color
 		winners_container.add_child(winner_inst)
 		await get_tree().create_timer(0.5).timeout
 		winner.local_score = 100
