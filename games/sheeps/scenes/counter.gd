@@ -37,5 +37,5 @@ func _shake() -> void:
 func _update() -> void:
 	if not data:
 		return
-	self_modulate = data.primary_color
+	self_modulate = data.color
 	self_modulate.a = 0.9
