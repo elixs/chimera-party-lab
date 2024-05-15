@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ckrrpdn8rkl17"]
+[gd_scene load_steps=23 format=3 uid="uid://ckrrpdn8rkl17"]
 
 [ext_resource type="Script" path="res://games/sheeps/main.gd" id="1_aue0y"]
 [ext_resource type="Texture2D" uid="uid://cq846861kl62j" path="res://games/sheeps/assets/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="2_rpbe7"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cdh2pf41lhq" path="res://games/sheeps/scenes/obstacles/obstacle_a.tscn" id="9_c3yqw"]
 [ext_resource type="PackedScene" uid="uid://r06wtsof277w" path="res://games/sheeps/scenes/obstacles/obstacle_d.tscn" id="12_m8ofn"]
 [ext_resource type="PackedScene" uid="uid://cuq0hn06n15ch" path="res://games/sheeps/scenes/obstacles/obstacle_e.tscn" id="13_atbuk"]
+[ext_resource type="AudioStream" uid="uid://byv1xxafxv8da" path="res://games/sheeps/assets/audio/country-180465.mp3" id="15_rof0t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6ps8"]
 texture = ExtResource("2_rpbe7")
@@ -199,10 +200,10 @@ y_sort_enabled = true
 metadata/_edit_lock_ = true
 
 [node name="ObstacleA" parent="Sheeps" instance=ExtResource("9_c3yqw")]
-position = Vector2(1101, 550)
+position = Vector2(1261, 550)
 
 [node name="ObstacleB" parent="Sheeps" instance=ExtResource("7_51r3j")]
-position = Vector2(354, 933)
+position = Vector2(352, 965)
 
 [node name="ObstacleC" parent="Sheeps" instance=ExtResource("8_7ahoy")]
 position = Vector2(495, 461)
@@ -210,22 +211,8 @@ position = Vector2(495, 461)
 [node name="Players" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Spawns" type="Node2D" parent="."]
-
-[node name="Player1" type="Marker2D" parent="Spawns"]
-position = Vector2(560, 540)
-
-[node name="Player2" type="Marker2D" parent="Spawns"]
-position = Vector2(1360, 540)
-
-[node name="Player3" type="Marker2D" parent="Spawns"]
-position = Vector2(960, 140)
-
-[node name="Player4" type="Marker2D" parent="Spawns"]
-position = Vector2(960, 940)
-
 [node name="GameOverTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 7.0
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -414,4 +401,8 @@ horizontal_alignment = 1
 position = Vector2(848, 3)
 
 [node name="ObstacleC" parent="." instance=ExtResource("13_atbuk")]
-position = Vector2(844, 879)
+position = Vector2(1030, 879)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_rof0t")
+autoplay = true
