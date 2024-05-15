@@ -16,5 +16,11 @@ description = "Count the [shake level=10][outline_color=black]sheeps[/outline_co
 image = ExtResource("1_647e5")
 inputs = Array[ExtResource("2_qmcy8")]([SubResource("Resource_l1ktx")])
 author = "akaipengin"
-credits = "[b]sheep:[/b]
-[url]https://pixelfrog-assets.itch.io/tiny-swords[/url]"
+credits = "[center]Sprites[/center]
+- Tiny Swords by [url=https://pixelfrog-assets.itch.io/]pixelfrog-assets[/url]
+
+[center]Music[/center]
+- Country by [url=https://pixabay.com/users/alban_gogh-28413822/]Alban_Gogh[/url]
+
+[center]Sound effects[/center]
+- Button by [url=https://pixabay.com/users/soundreality-31074404/]SoundReality[/url]"
