@@ -57,7 +57,7 @@ func _spawn_sheep() -> Node2D:
 
 
 func _spawn_sheeps() -> void:
-	_sheep_amount = randi_range(20, 40)
+	_sheep_amount = randi_range(40, 60)
 	var _sheeps_remaining = _sheep_amount
 	print(_sheep_amount)
 	while _sheeps_remaining > 0:
@@ -66,7 +66,7 @@ func _spawn_sheeps() -> void:
 		_sheeps_remaining -= sheeps
 		for i in sheeps:
 			_spawn_sheep()
-		await get_tree().create_timer(randf_range(0.1,0.2)).timeout
+		await get_tree().create_timer(randf_range(0.1,0.3)).timeout
 
 
 func _on_sheep_entered(body: Node2D) -> void:
@@ -97,7 +97,7 @@ func _show_results() -> void:
 	await _spawn_sheep_balls()
 	await get_tree().create_timer(2).timeout
 	await _show_winner()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(3).timeout
 	Game.end_game()
 
 

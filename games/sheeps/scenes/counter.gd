@@ -1,7 +1,8 @@
 extends PanelContainer
 
-@onready var label: Label = $MarginContainer/Label
+@export var click_scene: PackedScene
 var game_ended = false
+@onready var label: Label = $MarginContainer/Label
 
 var data: PlayerData:
 	set(value):
@@ -22,6 +23,7 @@ func _input(event: InputEvent) -> void:
 		if not game_ended:
 			count += 1
 		_shake()
+		_click()
 
 
 func show_count() -> void:
@@ -39,3 +41,10 @@ func _update() -> void:
 		return
 	self_modulate = data.color
 	self_modulate.a = 0.9
+
+
+func _click() -> void:
+	if not click_scene:
+		return
+	var click_inst = click_scene.instantiate()
+	add_child(click_inst)

@@ -1,9 +1,8 @@
 extends RigidBody2D
 
-#var acceleration = 1000
-#var max_speed = 200
-#
-#
-#func _physics_process(delta: float) -> void:
-	#velocity.x = move_toward(velocity.x, -max_speed, acceleration * delta)
-	#move_and_slide()
+func _ready() -> void:
+	constant_force.x = randf_range(-600, -300)
+
+
+func _on_timer_timeout() -> void:
+	constant_force.x *= 1.125
