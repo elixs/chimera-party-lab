@@ -12,6 +12,9 @@ description = "Count"
 [resource]
 script = ExtResource("2_a74hl")
 name = "Oh my sheep!"
-description = "Count the [shake level=10][outline_color=black][outline_size=20]sheeps[/outline_size][/outline_color][/shake]"
+description = "Count the [shake level=10][outline_color=black]sheeps[/outline_color][/shake]"
 image = ExtResource("1_647e5")
 inputs = Array[ExtResource("2_qmcy8")]([SubResource("Resource_l1ktx")])
+author = "akaipengin"
+credits = "[b]sheep:[/b]
+[url]https://pixelfrog-assets.itch.io/tiny-swords[/url]"
