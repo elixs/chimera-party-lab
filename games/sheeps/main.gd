@@ -38,7 +38,7 @@ func _ready() -> void:
 			var player_data = Game.players[i]
 			var counter_inst = counter_scene.instantiate()
 			counter_container.add_child(counter_inst)
-			counter_inst.data = player_data
+			counter_inst.setup(player_data)
 
 	kill_zone.body_entered.connect(_on_sheep_entered)
 	results_area.body_entered.connect(_on_sheep_ball_entered)
@@ -128,10 +128,10 @@ func _show_winner() -> void:
 	for counter in counter_container.get_children():
 		var player_diff = abs(counter.count - _sheep_amount)
 		if player_diff < diff:
-			winners = [counter.data]
+			winners = [counter.pc.data]
 			diff = player_diff
 		elif player_diff == diff:
-			winners.push_back(counter.data)
+			winners.push_back(counter.pc.data)
 	if winners.size() > 1:
 		winner_label.text += "s"
 	winner_label.show()

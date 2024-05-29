@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://0a60qcg7vt22"]
+[gd_scene load_steps=5 format=3 uid="uid://0a60qcg7vt22"]
 
 [ext_resource type="Script" path="res://games/sheeps/scenes/counter.gd" id="1_u3qbr"]
 [ext_resource type="PackedScene" uid="uid://bftbb0vhmhiay" path="res://games/sheeps/scenes/click_sfx.tscn" id="2_wecy7"]
+[ext_resource type="Script" path="res://common/scripts/player_controller.gd" id="3_qd62a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qu11y"]
 bg_color = Color(1, 1, 1, 0.498039)
@@ -23,3 +24,6 @@ layout_mode = 2
 layout_mode = 2
 text = "?"
 horizontal_alignment = 1
+
+[node name="PlayerController" type="Node" parent="."]
+script = ExtResource("3_qd62a")

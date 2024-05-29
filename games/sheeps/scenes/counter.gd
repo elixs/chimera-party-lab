@@ -3,27 +3,27 @@ extends PanelContainer
 @export var click_scene: PackedScene
 var game_ended = false
 @onready var label: Label = $MarginContainer/Label
+@onready var pc: PlayerController = $PlayerController
 
-var data: PlayerData:
-	set(value):
-		data = value
-		if is_node_ready():
-			_update()
+
 var count: int = 0
 
 
-func _ready() -> void:
-	_update()
-
-
 func _input(event: InputEvent) -> void:
-	if not data:
-		return
-	if event.is_action_pressed("action_a_%d" % data.input):
+	if event.is_action_pressed(pc.action_a):
 		if not game_ended:
 			count += 1
 		_shake()
 		_click()
+
+
+func setup(player_data: PlayerData) -> void:
+	pc.setup(player_data, change_color)
+
+
+func change_color(color: Color) -> void:
+	self_modulate = color
+	self_modulate.a = 0.9
 
 
 func show_count() -> void:
@@ -36,11 +36,7 @@ func _shake() -> void:
 	tween.tween_property(self, "scale", Vector2.ONE * 1.5, 0.1).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	tween.tween_property(self, "scale", Vector2.ONE, 0.1).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	
-func _update() -> void:
-	if not data:
-		return
-	self_modulate = data.color
-	self_modulate.a = 0.9
+
 
 
 func _click() -> void:
