@@ -3,23 +3,16 @@ extends HBoxContainer
 
 @onready var color_rect: ColorRect = $ColorRect
 @onready var label: Label = $Label
-
-var _player_data: PlayerData
-
-
-func _ready() -> void:
-	if _player_data:
-		_update()
+@onready var pc: PlayerController = $PlayerController
 
 
 func setup(player_data: PlayerData) -> void:
-	_player_data = player_data
+	pc.setup(player_data, on_color_changed)
 	player_data.local_score_changed.connect(_update_score)
 
 
-func _update():
-	color_rect.color = _player_data.color
-	_update_score(_player_data.local_score)
+func on_color_changed(color):
+	color_rect.color = color
 
 
 func _update_score(value) -> void:

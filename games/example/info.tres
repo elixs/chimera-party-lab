@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="GameInfo" load_steps=6 format=3 uid="uid://ctxblok0464xe"]
+
+[ext_resource type="Texture2D" uid="uid://b11hhvdk30w7e" path="res://games/example/assets/lab_tile.png" id="1_gghx5"]
+[ext_resource type="Script" path="res://common/scripts/game_input.gd" id="2_t5klu"]
+[ext_resource type="Script" path="res://common/scripts/game_info.gd" id="3_gjy2h"]
+
+[sub_resource type="Resource" id="Resource_kue26"]
+script = ExtResource("2_t5klu")
+inputs = 15
+description = "Move"
+
+[sub_resource type="Resource" id="Resource_tkiu8"]
+script = ExtResource("2_t5klu")
+inputs = 16
+description = "Attack"
+
+[resource]
+script = ExtResource("3_gjy2h")
+name = "This game"
+description = "This is the [shake level=200]description[/shake] of my game"
+image = ExtResource("1_gghx5")
+inputs = Array[ExtResource("2_t5klu")]([SubResource("Resource_kue26"), SubResource("Resource_tkiu8")])
+modes = 16
+author = "meh"
+credits = "[rainbow]
+[center][wave]Sprites:[/wave]
+....itch.io/...
+
+[wave]Music:[/wave]
+My Name
+[/center]
+[/rainbow]"

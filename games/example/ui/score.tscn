@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbcoeleb7kf2s"]
+[gd_scene load_steps=3 format=3 uid="uid://cbcoeleb7kf2s"]
 
-[ext_resource type="Script" path="res://games/my_game/ui/score.gd" id="1_l82wd"]
+[ext_resource type="Script" path="res://games/example/ui/score.gd" id="1_l82wd"]
+[ext_resource type="Script" path="res://common/scripts/player_controller.gd" id="2_7dkpo"]
 
 [node name="Score" type="HBoxContainer"]
 offset_right = 211.0
@@ -16,3 +17,6 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 text = "XXXX"
+
+[node name="PlayerController" type="Node" parent="."]
+script = ExtResource("2_7dkpo")

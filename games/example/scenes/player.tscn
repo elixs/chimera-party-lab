@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://52fmtjio7dn8"]
+
+[ext_resource type="Texture2D" uid="uid://cqcsq5w0yo5cy" path="res://games/example/assets/godot.svg" id="1_o7qlm"]
+[ext_resource type="Script" path="res://games/example/scenes/player.gd" id="2_ema42"]
+[ext_resource type="Script" path="res://common/scripts/player_controller.gd" id="3_r0s5t"]
+
+[node name="Player" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+pivot_offset = Vector2(64, 64)
+icon = ExtResource("1_o7qlm")
+script = ExtResource("2_ema42")
+
+[node name="PlayerController" type="Node" parent="."]
+script = ExtResource("3_r0s5t")
