@@ -15,6 +15,7 @@ name = "Oh my sheep!"
 description = "Count the [shake level=10][outline_color=black]sheeps[/outline_color][/shake]"
 image = ExtResource("1_647e5")
 inputs = Array[ExtResource("2_qmcy8")]([SubResource("Resource_l1ktx")])
+modes = 16
 author = "akaipengin"
 credits = "[center]Sprites[/center]
 - Tiny Swords by [url=https://pixelfrog-assets.itch.io/]pixelfrog-assets[/url]
