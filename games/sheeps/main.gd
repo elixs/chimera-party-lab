@@ -59,7 +59,7 @@ func _spawn_sheep() -> Node2D:
 func _spawn_sheeps() -> void:
 	_sheep_amount = randi_range(40, 60)
 	var _sheeps_remaining = _sheep_amount
-	print(_sheep_amount)
+	#Debug.log(_sheep_amount)
 	while _sheeps_remaining > 0:
 		var sheeps = randi() % 3
 		sheeps = min(sheeps, _sheeps_remaining)
